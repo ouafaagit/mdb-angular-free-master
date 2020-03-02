@@ -1,0 +1,139 @@
+<!--
+<h3>Create Client</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="client.firstName" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="client.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="emailId">Email</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="client.mail" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  &lt;!&ndash; <button class="btn btn-success" (click)="newEmployee()">Add</button> &ndash;&gt;
+</div>
+<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame.show()" mdbWavesEffect>Launch Modal
+</button>
+
+<div mdbModal #frame class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <form (ngSubmit)="onSubmit()">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Add client</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+          <input type="text" id="form34" class="form-control" mdbInput mdbValidate [formControl]="contactFormModalName">
+          <label for="form34">Your First Name</label>
+          <mdb-error
+            *ngIf="contactFormModalName.invalid && (contactFormModalName.dirty || contactFormModalName.touched)">Input
+            invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="contactFormModalName.valid && (contactFormModalName.dirty || contactFormModalName.touched)">Input
+            valid
+          </mdb-success>
+        </div>
+        <div class="md-form mb-5">
+        <mdb-icon fas icon="user" class="prefix grey-text"></mdb-icon>
+        <input type="text" id="form35" class="form-control" mdbInput mdbValidate [formControl]="contactFormModallastName">
+        <label for="form35">Your Last Name</label>
+        <mdb-error
+          *ngIf="contactFormModallastName.invalid && (contactFormModallastName.dirty || contactFormModallastName.touched)">Input
+          invalid
+        </mdb-error>
+        <mdb-success
+          *ngIf="contactFormModallastName.valid && (contactFormModallastName.dirty || contactFormModallastName.touched)">Input
+          valid
+        </mdb-success>
+      </div>
+        <div class="md-form mb-5">
+
+          <input type="text" id="form36" class="form-control" mdbInput mdbValidate [formControl]="contactFormModallastName">
+          <label for="form36">Your Last Name</label>
+          <mdb-error
+            *ngIf="contactFormModalcin.invalid && (contactFormModallastName.dirty || contactFormModallastName.touched)">Input
+            invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="contactFormModalcin.valid && (contactFormModalcin.dirty || contactFormModalcin.touched)">Input
+            valid
+          </mdb-success>
+        </div>
+
+        <div class="md-form mb-5">
+          <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon>
+          <input type="email" id="form29" class="form-control" mdbInput mdbValidate
+                 [formControl]="contactFormModalEmail">
+          <label for="form29">Your email</label>
+          <mdb-error
+            *ngIf="contactFormModalEmail.invalid && (contactFormModalEmail.dirty || contactFormModalEmail.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="contactFormModalEmail.valid && (contactFormModalEmail.dirty || contactFormModalEmail.touched)">Input
+            valid
+          </mdb-success>
+        </div>
+
+        <div class="md-form mb-5">
+          <label for="imageUpdate">Image</label>
+          <input type="file"
+                 class="form-control" mdbInput mdbValidate
+                 [formControl]="contactFormModalSubject"
+                 id="imageUpdate"
+                 accept="image/*"
+                 name="imageUpdate"
+                 placeholder="Choose your imageAdd "
+                 (change)="onFileChanged($event)">
+          <div [hidden]="!contactFormModalSubject.pristine" class="alert alert-danger">Image is required</div>
+        </div>
+
+        <div class="md-form">
+          <mdb-icon fas icon="pencil-alt" class="prefix grey-text"></mdb-icon>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="1" mdbInput mdbValidate
+                    [formControl]="contactFormModalMessage"></textarea>
+          <label for="form8">Your message</label>
+          <mdb-error
+            *ngIf="contactFormModalMessage.invalid && (contactFormModalMessage.dirty || contactFormModalMessage.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="contactFormModalMessage.valid && (contactFormModalMessage.dirty || contactFormModalMessage.touched)">
+            Input valid
+          </mdb-success>
+        </div>
+
+      </div>
+      <div class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="primary" class="waves-light" mdbWavesEffect>Send
+          <mdb-icon fas icon="paper-plane" class="ml-1"></mdb-icon>
+        </a>
+        <a type="button" mdbBtn color="primary" outline="true" class="waves-effect" data-dismiss="modal"
+           mdbWavesEffect (click)="frame.hide()">Cancel <i class="fab fa-mdb"></i></a>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+-->
